@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Array & Objek Mahasiswa</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <strong>03 · Array & Objek</strong>
+      <a href="../index.html">← Daftar latihan</a>
+    </header>
+    <main>
+      <h1>Data mahasiswa</h1>
+      <p class="muted">Referensi: halaman 10–12 dan latihan form + localStorage pada halaman 15. Lima data awal adalah data contoh fiktif untuk latihan.</p>
+      <div class="grid">
+        <section class="card">
+          <h2 id="judul-form">Tambah mahasiswa</h2>
+          <form id="form-mahasiswa" novalidate>
+            <label for="nama">Nama</label>
+            <input id="nama" required>
+            <label for="nim">NIM</label>
+            <input id="nim" inputmode="numeric" required>
+            <label for="jurusan">Jurusan</label>
+            <input id="jurusan" required>
+            <label for="nilai">Nilai (0–100)</label>
+            <input id="nilai" type="number" min="0" max="100" step="any" required>
+            <div class="actions">
+              <button id="simpan">Tambah mahasiswa</button>
+              <button type="button" id="batal" class="secondary" hidden>Batal edit</button>
+            </div>
+            <div id="pesan-form" class="output" role="status">Isi form untuk menambahkan data.</div>
+          </form>
+        </section>
+        <section class="card">
+          <h2>Ringkasan nilai</h2>
+          <div id="ringkasan" class="output" role="status"></div>
+          <label for="urut">Urutkan nama</label>
+          <select id="urut">
+            <option value="asc">A–Z</option>
+            <option value="desc">Z–A</option>
+          </select>
+          <label for="filter">Tampilkan</label>
+          <select id="filter">
+            <option value="semua">Semua mahasiswa</option>
+            <option value="diatas">Nilai di atas rata-rata</option>
+          </select>
+          <p class="muted">Nilai rata-rata dan tertinggi dihitung dari seluruh data, termasuk saat tabel difilter.</p>
+          <div id="pesan-storage" class="output error" role="status" hidden></div>
+        </section>
+        <section class="card wide">
+          <h2>Daftar mahasiswa</h2>
+          <div class="scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>No.</th>
+                  <th>Nama</th>
+                  <th>NIM</th>
+                  <th>Jurusan</th>
+                  <th>Nilai</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="tabel-mahasiswa"></tbody>
+            </table>
+          </div>
+          <p id="jumlah-data" class="muted"></p>
+        </section>
+      </div>
+      <footer>Syehabudin · 124140102</footer>
+    </main>
+  </body>
+</html>

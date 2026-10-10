@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Form, Todo & LocalStorage | Syehabudin</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <strong>05 · Form, Todo & LocalStorage</strong>
+      <a href="../index.html">← Daftar latihan</a>
+    </header>
+    <main>
+      <h1>Form, Todo & LocalStorage</h1>
+      <p class="muted">Referensi: halaman 15. Tambahkan kegiatan, tandai selesai, hapus kegiatan, lalu refresh untuk mengecek penyimpanan. Latihan form data mahasiswa tersedia di <a href="../03-array-objek/index.html">Array & Objek</a>.</p>
+      <div class="grid">
+        <section class="card">
+          <h2>Todo List</h2>
+          <form id="form-todo" novalidate>
+            <label for="isi-todo">Kegiatan</label>
+            <input id="isi-todo" placeholder="Contoh: Belajar JavaScript" required>
+            <div class="actions">
+              <button>Tambah kegiatan</button>
+            </div>
+          </form>
+          <div id="pesan-todo" class="output" role="status">Kegiatan disimpan di browser.</div>
+          <ul id="daftar-todo" class="todo-list"></ul>
+        </section>
+      </div>
+      <footer>Syehabudin · 124140102 · Kelas RA</footer>
+    </main>
+  </body>
+</html>

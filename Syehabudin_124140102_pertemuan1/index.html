@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0099ff">
+  <title>Kasir & Keranjang Belanja - Mini POS | Syehabudin</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Kasir Kampus, beranda">
+        <span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 9h16v11H4zM3 9l2-5h14l2 5M8 13v7m8-7v7M3 9c0 3 3 3 4 0 1 3 4 3 5 0 1 3 4 3 5 0 1 3 4 3 4 0"/></svg></span>
+        <span>Kasir Kampus<small>MINI POINT OF SALE</small></span>
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-heading" aria-labelledby="page-title">
+      <div><p class="eyebrow">KANTIN & TOKO KAMPUS</p><h1 id="page-title">Kasir & Keranjang Belanja</h1><p class="subtitle">Masukkan barang, lihat total belanja dan diskon, lalu hitung kembalian.</p></div>
+      <div class="operator"><span class="avatar" aria-hidden="true">S</span><div><strong>Syehabudin</strong><small>124140102 · Praktikum PAW</small></div></div>
+    </section>
+
+    <div id="pesan-penyimpanan" class="notice notice-warning" role="status" hidden></div>
+    <div class="workspace">
+      <section class="card input-card" aria-labelledby="judul-input">
+        <div class="card-heading"><span class="step-number">01</span><div><h2 id="judul-input">Tambah barang</h2><p>Masukkan detail barang belanja.</p></div></div>
+        <form id="form-barang" novalidate>
+          <div class="field"><label for="nama-barang">Nama barang</label><input id="nama-barang" name="nama" type="text" placeholder="Contoh: Penghapus" autocomplete="off" aria-describedby="bantuan-nama error-nama" required><small id="bantuan-nama" class="hint">Minimal 3 karakter.</small><p id="error-nama" class="field-error" hidden></p></div>
+          <div class="field"><label for="harga-barang">Harga satuan</label><div class="input-prefix"><span aria-hidden="true">Rp</span><input id="harga-barang" name="harga" type="number" min="500" step="any" inputmode="decimal" placeholder="&gt;500" aria-describedby="bantuan-harga error-harga" required></div><small id="bantuan-harga" class="hint">Lebih dari Rp500. Masukkan angka tanpa titik ribuan.</small><p id="error-harga" class="field-error" hidden></p></div>
+          <div class="field"><label for="jumlah-barang">Jumlah / Qty</label><input id="jumlah-barang" name="jumlah" type="number" min="1" step="1" inputmode="numeric" placeholder="1" aria-describedby="bantuan-jumlah error-jumlah" required><small id="bantuan-jumlah" class="hint">Bilangan bulat, minimal 1.</small><p id="error-jumlah" class="field-error" hidden></p></div>
+          <button class="button button-primary button-full" type="submit"><span aria-hidden="true">＋</span> Tambah ke keranjang</button>
+          <p id="pesan-form" class="form-message" role="status"></p>
+        </form>
+        <div class="offer"><span class="offer-icon" aria-hidden="true">%</span><div><strong>Belanja lebih, bayar lebih hemat.</strong><p>Diskon otomatis 10% untuk total belanja minimal Rp50.000.</p></div></div>
+        <p class="local-note"><span aria-hidden="true">◉</span> Keranjang tersimpan di browser ini.</p>
+      </section>
+
+      <div class="cart-column">
+        <section class="card cart-card" aria-labelledby="judul-keranjang">
+          <div class="cart-heading"><div class="card-heading"><span class="step-number">02</span><div><h2 id="judul-keranjang">Keranjang belanja <span id="jumlah-baris" class="count-badge">0</span></h2><p id="info-keranjang">Belum ada barang di keranjang.</p></div></div><button id="tombol-reset" class="button button-outline" type="button" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7v5h5M4 12a8 8 0 1 1 2 6"/></svg> Transaksi baru</button></div>
+          <div class="table-scroll"><table><caption class="sr-only">Daftar barang di keranjang belanja</caption><thead><tr><th scope="col">No.</th><th scope="col">Nama barang</th><th scope="col" class="text-right">Harga satuan</th><th scope="col" class="text-center">Qty</th><th scope="col" class="text-right">Subtotal</th><th scope="col" class="text-center">Aksi</th></tr></thead><tbody id="daftar-barang"></tbody></table></div>
+          <div id="keranjang-kosong" class="empty-state"><span class="empty-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M10 16h28l-3 24H13zM17 17v-5a7 7 0 0 1 14 0v5M19 27h10"/></svg></span><h3>Keranjang masih kosong</h3><p>Mulai dengan menambahkan barang<br>melalui form di sebelah kiri.</p></div>
+          <div class="cart-footer"><span id="status-keranjang" role="status">Siap untuk transaksi pertama.</span><span>Harga dalam Rupiah</span></div>
+        </section>
+
+        <section class="card checkout-card" aria-labelledby="judul-pembayaran">
+          <div class="payment-panel"><div class="card-heading"><span class="step-number">03</span><div><h2 id="judul-pembayaran">Pembayaran</h2><p>Masukkan nominal uang dari pembeli.</p></div></div><div class="field"><label for="uang-bayar">Uang bayar</label><div class="input-prefix"><span aria-hidden="true">Rp</span><input id="uang-bayar" type="number" min="0" step="any" inputmode="decimal" placeholder="Masukkan nominal uang" aria-describedby="status-bayar"></div></div><div id="status-bayar" class="payment-status" role="status">Tambahkan barang terlebih dahulu.</div><div class="change-row"><span>Kembalian</span><strong id="kembalian">—</strong></div></div>
+          <div class="summary-panel"><p class="eyebrow">RINGKASAN BELANJA</p><dl class="summary-list"><div><dt>Total belanja</dt><dd id="total-belanja">Rp0</dd></div><div class="discount-row"><dt>Diskon <span id="label-diskon">(0%)</span></dt><dd id="nilai-diskon">− Rp0</dd></div></dl><div class="grand-total"><span>Total yang dibayar</span><strong id="total-akhir">Rp0</strong></div><p id="pesan-diskon" class="discount-note">Diskon 10% mulai dari Rp50.000.</p></div>
+        </section>
+      </div>
+    </div>
+    <footer class="page-footer"><span>Syehabudin · 124140102 · Kelas RA</span></footer>
+  </main>
+  <noscript><div class="notice notice-warning">Aktifkan JavaScript di browser agar aplikasi kasir dapat digunakan.</div></noscript>
+</body>
+</html>

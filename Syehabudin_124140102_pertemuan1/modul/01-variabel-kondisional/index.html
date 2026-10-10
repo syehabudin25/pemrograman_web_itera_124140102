@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Variabel & Kondisional</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <strong>01 · Variabel & Kondisional</strong>
+      <a href="../index.html">← Daftar latihan</a>
+    </header>
+    <main>
+      <h1>Variabel & Kondisional</h1>
+      <p class="muted">Referensi: halaman 2–4. Umur dan kota asal diisi sendiri, tidak menggunakan data pribadi perkiraan.</p>
+      <div class="grid">
+        <section class="card">
+          <h2>Biodata dengan const dan let</h2>
+          <form id="form-biodata">
+            <label for="umur">Umur</label>
+            <input id="umur" type="number" min="0" max="150" required>
+            <label for="kota">Kota asal</label>
+            <input id="kota" required>
+            <div class="actions">
+              <button>Tampilkan biodata</button>
+            </div>
+          </form>
+          <div id="hasil-biodata" class="output" role="status">Nama: Syehabudin</div>
+        </section>
+        <section class="card">
+          <h2>Kelulusan & Grade</h2>
+          <p class="muted">Lulus jika nilai ≥ 70. Contoh batas grade: A ≥ 85, B ≥ 70, C ≥ 60, D ≥ 50, sisanya E.</p>
+          <form id="form-nilai">
+            <label for="nilai">Nilai (0–100)</label>
+            <input id="nilai" type="number" min="0" max="100" step="any" required>
+            <div class="actions">
+              <button>Cek nilai</button>
+            </div>
+          </form>
+          <div id="hasil-nilai" class="output" role="status">Hasil akan tampil di sini.</div>
+        </section>
+        <section class="card">
+          <h2>Kategori umur</h2>
+          <p class="muted">Anak &lt; 12, remaja 12–17, dewasa 18–59, lansia ≥ 60.</p>
+          <form id="form-umur">
+            <label for="usia">Umur</label>
+            <input id="usia" type="number" min="0" max="150" required>
+            <div class="actions">
+              <button>Cek kategori</button>
+            </div>
+          </form>
+          <div id="hasil-umur" class="output" role="status">Hasil akan tampil di sini.</div>
+        </section>
+        <section class="card">
+          <h2>Nama hari dengan switch</h2>
+          <p class="muted">Konvensi latihan: 1 = Monday hingga 7 = Sunday.</p>
+          <form id="form-hari">
+            <label for="hari">Angka hari (1–7)</label>
+            <input id="hari" type="number" min="1" max="7" required>
+            <div class="actions">
+              <button>Konversi hari</button>
+            </div>
+          </form>
+          <div id="hasil-hari" class="output" role="status">Hasil akan tampil di sini.</div>
+        </section>
+      </div>
+      <footer>Syehabudin · 124140102</footer>
+    </main>
+  </body>
+</html>

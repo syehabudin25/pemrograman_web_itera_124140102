@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>DOM & API</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <strong>04 · DOM & API</strong>
+      <div class="actions">
+        <a href="../index.html">← Daftar latihan</a>
+        <button id="tombol-tema" class="secondary" type="button" aria-pressed="false">Dark mode</button>
+      </div>
+    </header>
+    <main>
+      <h1>Manipulasi DOM & Fetch API</h1>
+      <p class="muted">Referensi: halaman 12–15. Latihan form mahasiswa dan penyimpanan datanya ada di <a href="../03-array-objek/index.html">halaman Array & Objek</a>.</p>
+      <div class="grid">
+        <section class="card">
+          <h2>Manipulasi DOM</h2>
+          <p class="muted">Tambahkan elemen, hapus elemen terakhir, dan ubah warna latar daftar.</p>
+          <div class="actions">
+            <button id="tambah-dom">Tambah item</button>
+            <button id="hapus-dom" class="secondary">Hapus terakhir</button>
+            <button id="warna-dom" class="secondary">Ubah warna</button>
+          </div>
+          <ul id="daftar-dom" class="output"></ul>
+        </section>
+        <section class="card wide">
+          <h2>Daftar post API</h2>
+          <p class="muted">Data contoh dari JSONPlaceholder. Koneksi internet diperlukan saat memuat data. Setiap halaman menampilkan maksimal 10 post.</p>
+          <button id="muat-post">Muat post dari API</button>
+          <label for="cari-post">Cari berdasarkan judul</label>
+          <input id="cari-post" type="search" placeholder="Ketik judul post...">
+          <div id="pesan-api" class="output" role="status">Klik tombol untuk memuat data.</div>
+          <ul id="daftar-post" class="post-list"></ul>
+          <div class="pagination">
+            <button id="sebelumnya" class="secondary" disabled>Previous</button>
+            <span id="info-halaman">Belum ada data</span>
+            <button id="berikutnya" class="secondary" disabled>Next</button>
+          </div>
+        </section>
+      </div>
+      <footer>Syehabudin · 124140102</footer>
+    </main>
+  </body>
+</html>

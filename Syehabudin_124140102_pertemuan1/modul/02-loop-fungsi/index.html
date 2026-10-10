@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Loop & Fungsi</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <strong>02 · Loop & Fungsi</strong>
+      <a href="../index.html">← Daftar latihan</a>
+    </header>
+    <main>
+      <h1>Loop & Fungsi</h1>
+      <p class="muted">Referensi: halaman 5–9.</p>
+      <div class="grid">
+        <section class="card">
+          <h2>Tabel perkalian 1–10</h2>
+          <form id="form-perkalian">
+            <label for="angka-kali">Angka pilihan</label>
+            <input id="angka-kali" type="number" min="-1000000" max="1000000" step="any" required>
+            <div class="actions">
+              <button>Buat tabel</button>
+            </div>
+          </form>
+          <div id="hasil-perkalian" class="output" role="status">Hasil akan tampil di sini.</div>
+        </section>
+        <section class="card">
+          <h2>Faktorial</h2>
+          <p class="muted">Gunakan bilangan bulat 0–18 agar hasil masih akurat dengan tipe Number.</p>
+          <form id="form-faktorial">
+            <label for="angka-faktorial">Angka</label>
+            <input id="angka-faktorial" type="number" min="0" max="18" required>
+            <div class="actions">
+              <button>Hitung faktorial</button>
+            </div>
+          </form>
+          <div id="hasil-faktorial" class="output" role="status">Hasil akan tampil di sini.</div>
+        </section>
+        <section class="card">
+          <h2>Bilangan prima</h2>
+          <form id="form-prima">
+            <label for="angka-prima">Bilangan bulat (0–1.000.000)</label>
+            <input id="angka-prima" type="number" min="0" max="1000000" required>
+            <div class="actions">
+              <button>Cek prima</button>
+            </div>
+          </form>
+          <div id="hasil-prima" class="output" role="status">Hasil akan tampil di sini.</div>
+        </section>
+        <section class="card">
+          <h2>Kalkulator BMI</h2>
+          <p class="muted">Latihan rumus BMI = berat (kg) ÷ tinggi (m)².</p>
+          <form id="form-bmi">
+            <label for="berat">Berat (kg)</label>
+            <input id="berat" type="number" min="0.1" max="1000" step="any" required>
+            <label for="tinggi">Tinggi (cm)</label>
+            <input id="tinggi" type="number" min="1" max="300" step="any" required>
+            <div class="actions">
+              <button>Hitung BMI</button>
+            </div>
+          </form>
+          <div id="hasil-bmi" class="output" role="status">Hasil akan tampil di sini.</div>
+        </section>
+        <section class="card wide">
+          <h2>FizzBuzz 1–100</h2>
+          <p class="muted">Kelipatan 3 menjadi Fizz, kelipatan 5 menjadi Buzz, kelipatan keduanya menjadi FizzBuzz.</p>
+          <button id="tombol-fizzbuzz">Tampilkan FizzBuzz</button>
+          <div id="hasil-fizzbuzz" class="output" role="status">Hasil akan tampil di sini.</div>
+        </section>
+      </div>
+      <footer>Syehabudin · 124140102</footer>
+    </main>
+  </body>
+</html>
