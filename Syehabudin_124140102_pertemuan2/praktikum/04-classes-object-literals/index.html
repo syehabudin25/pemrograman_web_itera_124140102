@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Classes &amp; object literals | Latihan Pertemuan 2</title>
+  <link rel="stylesheet" href="../style.css">
+  <script type="module" src="script.js"></script>
+</head>
+<body>
+  <header><strong>04 · Classes &amp; object literals</strong><a href="../index.html">← Daftar latihan</a></header>
+  <main><h1>Classes &amp; object literals</h1><p class="muted">Coba inheritance produk, getter/setter, computed property names, dan default parameters.</p>
+  <div class="grid">
+<section class="card"><h2>Produk dan perubahan harga</h2><form id="form-produk"><label for="jenis">Jenis produk</label><select id="jenis"><option value="digital">DigitalProduct</option><option value="physical">PhysicalProduct</option></select><label for="nama-produk">Nama produk</label><input id="nama-produk" value="Buku panduan praktikum" maxlength="100" required><div class="columns"><div><label for="harga">Harga awal</label><input id="harga" type="number" min="0" step="1000" value="20000" required></div><div><label for="harga-baru">Harga lewat setter</label><input id="harga-baru" type="number" min="0" step="1000" value="25000" required></div></div><label for="kunci">Nama properti dinamis</label><input id="kunci" value="hargaMahasiswa" maxlength="40" required><label for="jumlah">Jumlah pesanan</label><input id="jumlah" type="number" min="1" max="100" value="2" required><div class="actions"><button type="submit">Jalankan demo produk</button></div></form></section>
+<section class="card"><h2>Inheritance, getter, dan setter</h2><pre id="hasil-class" class="output" role="status"></pre><h3>Computed property names</h3><pre id="hasil-dynamic" class="output"></pre></section>
+<section class="card"><h2>Default parameters + destructuring</h2><p>Pemanggilan tanpa argumen memakai harga Rp10.000, jumlah 1, dan diskon 0. Pemanggilan dengan argumen memakai produk formulir dan diskon 10%.</p><pre id="hasil-default" class="output"></pre></section>
+<section class="card"><h2>Dua turunan Product</h2><pre id="hasil-inheritance" class="output"></pre></section>
+</div>
+  </main>
+</body>
+</html>

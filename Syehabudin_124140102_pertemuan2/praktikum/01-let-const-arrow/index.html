@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Let, const &amp; arrow functions | Latihan Pertemuan 2</title>
+  <link rel="stylesheet" href="../style.css">
+  <script type="module" src="script.js"></script>
+</head>
+<body>
+  <header><strong>01 · Let, const &amp; arrow functions</strong><a href="../index.html">← Daftar latihan</a></header>
+  <main><h1>Let, const &amp; arrow functions</h1><p class="muted">Bandingkan scope variabel, perubahan objek const, dan beberapa bentuk arrow function.</p>
+  <div class="grid">
+<section class="card"><h2>Scope variabel dan const</h2><p>Nilai <code>var</code> di luar blok ikut berubah. Variabel <code>let</code> di dalam dan di luar blok tetap berbeda.</p><p>Properti objek <code>const</code> boleh diubah. Reassign dan akses sebelum deklarasi dicoba dalam <code>try/catch</code> agar error dapat ditampilkan.</p><button id="ulang-variabel" type="button">Jalankan demo variabel</button><pre id="hasil-variabel" class="output" role="status"></pre></section>
+<section class="card"><h2>Fungsi reguler dan arrow function</h2><form id="form-arrow"><div class="columns"><div><label for="angka-a">Angka pertama</label><input id="angka-a" type="number" step="any" value="5" required></div><div><label for="angka-b">Angka kedua</label><input id="angka-b" type="number" step="any" value="3" required></div></div><div class="actions"><button type="submit">Hitung dan bandingkan</button></div></form><pre id="hasil-arrow" class="output" role="status"></pre><p class="hint">Hasil mencakup implicit return, tanpa parameter, satu parameter, dan pengembalian objek.</p></section>
+</div>
+  </main>
+</body>
+</html>

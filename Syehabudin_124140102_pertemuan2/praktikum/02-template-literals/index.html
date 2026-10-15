@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Template literals | Latihan Pertemuan 2</title>
+  <link rel="stylesheet" href="../style.css">
+  <script type="module" src="script.js"></script>
+</head>
+<body>
+  <header><strong>02 · Template literals</strong><a href="../index.html">← Daftar latihan</a></header>
+  <main><h1>Template literals</h1><p class="muted">Bandingkan penggabungan string, interpolasi, multiline, dan HTML dinamis.</p>
+  <div class="grid">
+<section class="card"><h2>Data profil</h2><form id="form-profil"><label for="nama">Nama</label><input id="nama" value="Syehabudin" maxlength="80" required><label for="nim">NIM</label><input id="nim" value="124140102" maxlength="30" required><label for="matkul">Mata kuliah</label><input id="matkul" value="Pengembangan Aplikasi Web" maxlength="100" required><label for="sks">Jumlah SKS</label><input id="sks" type="number" min="1" max="6" value="3" required><div class="actions"><button type="submit">Buat tampilan profil</button></div></form></section>
+<section class="card"><h2>Perbandingan string</h2><pre id="hasil-string" class="output" role="status"></pre><p class="hint">Teks cara lama dan template literals menghasilkan kalimat yang sama. Ekspresi serta baris baru ditampilkan dalam hasil berikutnya.</p></section>
+<section class="card"><h2>Pratinjau HTML</h2><div id="preview-profil" class="preview"></div></section><section class="card"><h2>HTML yang dihasilkan</h2><pre id="kode-html" class="output"></pre><p class="hint">Teks dari formulir di-escape sebelum dimasukkan ke HTML.</p></section>
+</div>
+  </main>
+</body>
+</html>

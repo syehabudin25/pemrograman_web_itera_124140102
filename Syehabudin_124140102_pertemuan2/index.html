@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ff9d00">
+  <meta name="description" content="Personal dashboard untuk mencatat tugas kuliah, mengatur tenggat, dan memantau penyelesaiannya.">
+  <title>Daftar Tugas Kuliah | Syehabudin</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20x%3D%221.5%22%20y%3D%221.5%22%20width%3D%2261%22%20height%3D%2261%22%20rx%3D%2213%22%20fill%3D%22%23ff9d00%22%20stroke%3D%22%2324180f%22%20stroke-width%3D%223%22%2F%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%2324180f%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m13%2019%204%204%207-9m7%205h20M13%2033h9m9%200h20M13%2047h9m9%200h20%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#daftar-tugas">Langsung ke daftar tugas</a>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Beranda Daftar Tugas Kuliah">
+        <span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 5h11M9 12h11M9 19h11M3 5l1 1 2-2M3 12l1 1 2-2M3 19l1 1 2-2"></path></svg></span>
+        <span>Tugas Kuliah<span class="brand-subtitle">PERSONAL DASHBOARD</span><span class="brand-owner">Syehabudin (124140102)</span></span>
+      </a>
+      <nav class="page-nav" aria-label="Navigasi pertemuan 2"><a href="praktikum/index.html">Latihan praktikum</a></nav>
+    </header>
+    <main>
+      <section class="page-heading" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">AKTIVITAS PERKULIAHAN</p>
+          <h1 id="page-title">Daftar tugas kuliah</h1>
+          <p class="subtitle">Catat tugas, atur tenggat, dan pantau penyelesaiannya.</p>
+        </div>
+        <p class="today"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M7 3v4M17 3v4M3 11h18"></path></svg><time id="tanggal-hari-ini"></time></p>
+      </section>
+
+      <section class="summary" aria-label="Ringkasan tugas">
+        <div class="summary-item"><span class="summary-label">Total tugas</span><span class="summary-number" id="total-tugas">0</span><span class="summary-detail">Semua tugas yang tercatat</span></div>
+        <div class="summary-item"><span class="summary-label">Belum selesai</span><span class="summary-number" id="belum-selesai">0</span><span class="summary-detail">Tugas yang perlu dikerjakan</span></div>
+        <div class="summary-item"><span class="summary-label">Sudah selesai</span><span class="summary-number" id="sudah-selesai">0</span><span class="summary-detail">Tugas yang sudah diselesaikan</span></div>
+        <div class="summary-item summary-progress">
+          <div class="progress-ring" id="progress-ring" role="progressbar" aria-label="Persentase tugas selesai" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-center"><span id="progress-percent">0<span>%</span></span></div></div>
+          <div><span class="summary-label">Progres tugas</span><p id="progress-message" class="summary-detail">0 dari 0 tugas selesai</p></div>
+        </div>
+      </section>
+
+      <section class="tasks-section" aria-labelledby="tasks-title">
+        <p id="storage-warning" class="storage-warning" role="alert" hidden></p>
+        <div class="section-heading">
+          <div class="heading-copy"><span class="step-number" aria-hidden="true">01</span><div><h2 id="tasks-title">Daftar tugas</h2><p class="section-description">Kelola tugas berdasarkan tenggat pengumpulan.</p></div></div>
+          <button class="button button-primary" id="tambah-tugas" type="button"><span class="plus-icon" aria-hidden="true">+</span> Tambah tugas</button>
+        </div>
+        <div class="search-field"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 4.5 4.5"></path></svg><label class="sr-only" for="cari-tugas">Cari judul, mata kuliah, atau catatan</label><input id="cari-tugas" type="search" placeholder="Cari tugas atau mata kuliah..." autocomplete="off"></div>
+        <div class="filter-bar">
+          <div class="status-filters" role="group" aria-label="Filter status tugas">
+            <button class="filter-tab active" type="button" data-status="all" aria-pressed="true">Semua</button>
+            <button class="filter-tab" type="button" data-status="pending" aria-pressed="false">Belum selesai</button>
+            <button class="filter-tab" type="button" data-status="completed" aria-pressed="false">Selesai</button>
+            <button class="filter-tab" type="button" data-status="overdue" aria-pressed="false">Terlambat</button>
+          </div>
+          <label class="sr-only" for="filter-matkul">Filter mata kuliah</label>
+          <select id="filter-matkul" class="course-filter"><option value="">Semua mata kuliah</option></select>
+        </div>
+        <div class="list-caption"><span id="jumlah-hasil" role="status">Memuat daftar tugas...</span><span><span class="save-dot" aria-hidden="true"></span><span id="save-status">Tersimpan otomatis</span></span></div>
+        <div id="daftar-tugas" class="task-grid" tabindex="-1"></div>
+        <noscript><p class="empty-state">Aktifkan JavaScript di browser agar daftar tugas dapat digunakan.</p></noscript>
+      </section>
+    </main>
+  </div>
+
+  <dialog id="dialog-tugas" class="app-dialog" aria-labelledby="dialog-title">
+    <form id="form-tugas">
+      <div class="dialog-header"><div><p class="section-kicker">DETAIL TUGAS KULIAH</p><h2 id="dialog-title">Tambah tugas baru<span class="accent-text">.</span></h2></div><button class="close-button" type="button" data-close="dialog-tugas" aria-label="Tutup formulir">×</button></div>
+      <input type="hidden" id="task-id" name="id">
+      <label for="judul-tugas">Judul tugas <span aria-hidden="true">*</span></label>
+      <input id="judul-tugas" name="title" required maxlength="100" placeholder="Contoh: Membuat personal dashboard" autofocus>
+      <label for="mata-kuliah">Mata kuliah <span aria-hidden="true">*</span></label>
+      <input id="mata-kuliah" name="course" required maxlength="80" list="pilihan-matkul" placeholder="Contoh: Pengembangan Aplikasi Web">
+      <datalist id="pilihan-matkul"></datalist>
+      <div class="form-row"><div><label for="tenggat-tugas">Tanggal tenggat <span aria-hidden="true">*</span></label><input id="tenggat-tugas" name="dueDate" type="date" required></div><div><label for="jam-tugas">Jam tenggat</label><input id="jam-tugas" name="dueTime" type="time" value="23:59" required></div></div>
+      <label for="prioritas-tugas">Prioritas</label>
+      <select id="prioritas-tugas" name="priority"><option value="normal">Biasa</option><option value="high">Tinggi</option><option value="low">Rendah</option></select>
+      <label for="catatan-tugas">Catatan <span class="optional-label">(opsional)</span></label>
+      <textarea id="catatan-tugas" name="notes" rows="3" maxlength="500" placeholder="Tulis hal penting yang perlu kamu ingat..."></textarea>
+      <p id="form-error" class="form-error" role="alert"></p>
+      <div class="dialog-actions"><button class="button button-outline" type="button" data-close="dialog-tugas">Batal</button><button class="button button-primary" type="submit" id="simpan-tugas">Simpan tugas</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="dialog-hapus" class="app-dialog delete-dialog" aria-labelledby="delete-title">
+    <div class="dialog-header"><h2 id="delete-title">Hapus tugas ini<span class="accent-text">?</span></h2><button class="close-button" type="button" data-close="dialog-hapus" aria-label="Tutup konfirmasi">×</button></div>
+    <p>Tugas <strong id="nama-tugas-hapus"></strong> akan dihapus dari daftar.</p>
+    <div class="dialog-actions"><button class="button button-outline" type="button" data-close="dialog-hapus" autofocus>Batal</button><button class="button button-primary" type="button" id="konfirmasi-hapus">Ya, hapus tugas</button></div>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

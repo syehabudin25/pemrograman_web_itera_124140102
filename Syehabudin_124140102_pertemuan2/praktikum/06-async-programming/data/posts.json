@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "userId": 1,
+    "title": "Membuat daftar tugas kuliah",
+    "body": "Catat judul tugas dan tenggat pengumpulan pada dashboard."
+  },
+  {
+    "id": 2,
+    "userId": 2,
+    "title": "Belajar arrow function",
+    "body": "Bandingkan fungsi reguler dengan arrow function yang lebih ringkas."
+  },
+  {
+    "id": 3,
+    "userId": 3,
+    "title": "Memahami let dan const",
+    "body": "Gunakan const untuk referensi yang tetap dan let untuk nilai yang berubah."
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "title": "Praktikum template literals",
+    "body": "Tampilkan data profil menggunakan interpolasi dan string multiline."
+  },
+  {
+    "id": 5,
+    "userId": 2,
+    "title": "Latihan destructuring bertingkat",
+    "body": "Ambil data program studi dan kota dari objek mahasiswa."
+  },
+  {
+    "id": 6,
+    "userId": 3,
+    "title": "Spread operator untuk data baru",
+    "body": "Gabungkan array dan objek tanpa mengubah data awal."
+  },
+  {
+    "id": 7,
+    "userId": 1,
+    "title": "Rest parameter pada statistik",
+    "body": "Hitung nilai minimum maksimum dan rata-rata dari beberapa angka."
+  },
+  {
+    "id": 8,
+    "userId": 2,
+    "title": "Mengenal class Product",
+    "body": "Buat produk digital dan fisik dengan inheritance."
+  },
+  {
+    "id": 9,
+    "userId": 3,
+    "title": "Mengolah nilai dengan array methods",
+    "body": "Gunakan map filter dan reduce untuk menganalisis nilai."
+  },
+  {
+    "id": 10,
+    "userId": 1,
+    "title": "Pengelompokan tugas per mata kuliah",
+    "body": "Kelompokkan tugas menggunakan reduce agar mudah dibaca."
+  },
+  {
+    "id": 11,
+    "userId": 2,
+    "title": "Memuat dua sumber data",
+    "body": "Gabungkan postingan dengan nama penulis menggunakan Promise.all."
+  },
+  {
+    "id": 12,
+    "userId": 3,
+    "title": "Menangani kegagalan jaringan",
+    "body": "Tampilkan pesan error dan lakukan retry dengan jeda bertambah."
+  },
+  {
+    "id": 13,
+    "userId": 1,
+    "title": "Pencarian dengan debounce",
+    "body": "Tunggu sebentar setelah pengguna mengetik sebelum mengambil data."
+  },
+  {
+    "id": 14,
+    "userId": 2,
+    "title": "Pagination data asinkron",
+    "body": "Tampilkan lima postingan per halaman setelah data selesai dimuat."
+  },
+  {
+    "id": 15,
+    "userId": 3,
+    "title": "Menyimpan tugas di browser",
+    "body": "Gunakan localStorage agar data bertahan setelah refresh."
+  }
+]

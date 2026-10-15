@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Async programming | Latihan Pertemuan 2</title>
+  <link rel="stylesheet" href="../style.css">
+  <script type="module" src="script.js"></script>
+</head>
+<body>
+  <header><strong>06 · Async programming</strong><a href="../index.html">← Daftar latihan</a></header>
+  <main><h1>Async programming</h1><p class="muted">Gabungkan dua sumber data dengan retry, loading, error handling, pagination, dan pencarian debounce.</p>
+  <div class="grid">
+<section class="card"><h2>Sumber data dan pencarian</h2><form id="form-async"><label for="sumber-data">Sumber data</label><select id="sumber-data"><option value="local">JSON lokal — tanpa internet</option><option value="online">API JSONPlaceholder — perlu internet</option></select><label for="cari-post">Cari judul, isi, atau penulis</label><input id="cari-post" type="search" placeholder="Contoh lokal: tugas, arrow, atau Andi" autocomplete="off"><p class="hint">Pencarian berjalan setelah berhenti mengetik selama 350 ms.</p><label for="simulasi-error">Simulasi kegagalan jaringan</label><select id="simulasi-error"><option value="no">Nonaktif</option><option value="yes">Aktif — uji retry dan pesan error</option></select><div class="actions"><button id="muat-data" type="submit">Muat data</button></div></form><p id="mode-status" class="hint"></p><p class="hint">Mode lokal memakai dua file JSON. Mode online menggabungkan endpoint users dan posts dari JSONPlaceholder.</p></section>
+<section class="card"><h2>Proses async</h2><ul><li>Dua sumber dimuat bersamaan melalui <code>Promise.all()</code>.</li><li>Kegagalan dicoba ulang maksimal 3 kali, dengan jeda 250 ms lalu 500 ms.</li><li>Setiap permintaan memiliki batas waktu 4 detik.</li><li>Error ditangani oleh <code>withErrorBoundary()</code> dan ditampilkan di halaman.</li><li>Hasil async ditampilkan sebanyak 5 postingan per halaman.</li><li>Pencarian baru membatalkan permintaan lama agar hasil tidak tertukar.</li></ul><div id="loading" class="loading" role="status" hidden>Mengambil data...</div><p id="retry-status" class="hint" role="status"></p><p id="pesan-error" class="output error" role="alert" hidden></p></section>
+<section class="card wide"><h2>Postingan dan penulis</h2><div id="hasil-post" class="post-list" aria-label="Hasil pengambilan data" aria-live="polite" aria-busy="false"></div><div class="actions"><button id="sebelumnya" class="secondary" type="button" disabled>← Sebelumnya</button><p id="info-halaman" class="muted" role="status"></p><button id="berikutnya" class="secondary" type="button" disabled>Berikutnya →</button></div></section>
+</div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modern array methods | Latihan Pertemuan 2</title>
+  <link rel="stylesheet" href="../style.css">
+  <script type="module" src="script.js"></script>
+</head>
+<body>
+  <header><strong>05 · Modern array methods</strong><a href="../index.html">← Daftar latihan</a></header>
+  <main><h1>Modern array methods</h1><p class="muted">Kelompokkan data, hitung rata-rata, ratakan array, dan gabungkan filter, map, serta reduce.</p>
+  <div class="grid">
+<section class="card"><h2>Data nilai mahasiswa</h2><p class="muted">Enam data berikut merupakan data fiktif untuk latihan.</p><div class="scroll"><table><thead><tr><th>Nama</th><th>Mata kuliah</th><th>Nilai</th></tr></thead><tbody id="data-mahasiswa"></tbody></table></div><h3>Rata-rata, find, some, dan every</h3><pre id="hasil-rata" class="output"></pre></section>
+<section class="card"><h2>Filter → map → reduce</h2><form id="form-analisis"><label for="matkul">Mata kuliah</label><select id="matkul"><option value="">Semua mata kuliah</option><option>PAW</option><option>PAM</option><option>Jaringan Komputer</option></select><label for="nilai-min">Nilai minimum</label><input id="nilai-min" type="number" min="0" max="100" value="80" required><div class="actions"><button type="submit">Analisis nilai</button></div></form><pre id="hasil-analisis" class="output" role="status"></pre></section>
+<section class="card"><h2>groupBy menggunakan reduce</h2><pre id="hasil-group" class="output"></pre></section>
+<section class="card"><h2>Array bertingkat menjadi flat</h2><p><code>flat()</code> meratakan array angka, sedangkan <code>flatMap()</code> mengubah daftar semester menjadi daftar mata kuliah.</p><pre id="hasil-flat" class="output"></pre></section>
+</div>
+  </main>
+</body>
+</html>

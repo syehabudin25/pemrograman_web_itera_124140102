@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Destructuring &amp; spread/rest | Latihan Pertemuan 2</title>
+  <link rel="stylesheet" href="../style.css">
+  <script type="module" src="script.js"></script>
+</head>
+<body>
+  <header><strong>03 · Destructuring &amp; spread/rest</strong><a href="../index.html">← Daftar latihan</a></header>
+  <main><h1>Destructuring &amp; spread/rest</h1><p class="muted">Ambil properti bertingkat, hitung statistik, gabungkan objek, dan gunakan destructuring dalam loop.</p>
+  <div class="grid">
+<section class="card"><h2>Rest parameters dan spread</h2><form id="form-operator"><label for="angka">Angka untuk statistik</label><textarea id="angka" required>70, 80, 90, 85, 75</textarea><p class="hint">Pisahkan angka dengan spasi atau koma. Untuk desimal gunakan titik, misalnya 8.5.</p><label for="tema">Tema pada objek terakhir</label><select id="tema"><option value="cyan">Cyan</option><option value="terang">Terang</option><option value="gelap">Gelap</option></select><div class="actions"><button type="submit">Jalankan latihan</button></div></form><h3>Statistik: min, max, average</h3><pre id="hasil-statistik" class="output" role="status"></pre></section>
+<section class="card"><h2>Merge tiga objek</h2><p>Properti dari objek terakhir menggantikan properti dengan nama yang sama pada objek sebelumnya.</p><pre id="hasil-merge" class="output"></pre></section>
+<section class="card"><h2>Destructuring objek bertingkat</h2><p>Kota diambil dari <code>academic.campus.address.city</code>.</p><pre id="hasil-nested" class="output"></pre></section>
+<section class="card"><h2>Destructuring dalam for...of</h2><pre id="hasil-loop" class="output"></pre></section>
+</div>
+  </main>
+</body>
+</html>
