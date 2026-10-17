@@ -38,20 +38,19 @@ Aplikasi perlu dijalankan lewat Live Server karena menggunakan ES module dan mem
 
 ## Penggunaan ES6+
 
-Berikut bagian kode yang saya gunakan untuk menerapkan materi pertemuan 2.
-
-| Fitur | Letak kode | Penggunaan |
-| --- | --- | --- |
-| `let` dan `const` | `js/main.js`, baris 5 dan 7 | Menyimpan referensi elemen dan data pilihan mata kuliah. |
-| Arrow functions | `js/main.js`, baris 25, 41, dan 50 | Membuat kartu tugas dan memperbarui tampilan. |
-| Template literals | `js/main.js`, baris 31 | Menyusun HTML kartu berdasarkan data tugas. |
-| Class | `js/app.js`, baris 5 dan 27 | `TaskItem` untuk data tugas dan `DashboardApp` untuk mengelola aplikasi. |
-| `async/await` | `js/app.js`, baris 132 dan 145 | Mengambil pilihan mata kuliah dari file JSON. |
-| Destructuring | `js/main.js`, baris 26 | Mengambil properti dari objek tugas. |
-| Spread operator | `js/app.js`, baris 75 dan 81 | Menambah atau mengubah tugas menggunakan array dan objek baru. |
-| Rest syntax | `js/main.js`, baris 92 | Memisahkan ID dari data formulir. |
-| `localStorage` | `js/app.js`, baris 45 dan 66 | Membaca dan menyimpan data tugas dalam bentuk JSON. |
-| ES module | `js/main.js`, baris 1-2 | Mengimpor class dan fungsi dari file lain. |
+Berikut penerapan materi ES6+ pada aplikasi.
+| Fitur | Penggunaan |
+| --- | --- |
+| `let` dan `const` | Menyimpan referensi elemen dan data pilihan mata kuliah. |
+| Arrow functions | Membuat kartu tugas dan memperbarui tampilan. |
+| Template literals | Menyusun HTML kartu berdasarkan data tugas. |
+| Class | `TaskItem` untuk data tugas dan `DashboardApp` untuk mengelola aplikasi. |
+| `async/await` | Mengambil pilihan mata kuliah dari file JSON. |
+| Destructuring | Mengambil properti dari objek tugas. |
+| Spread operator | Menambah atau mengubah tugas menggunakan array dan objek baru. |
+| Rest syntax | Memisahkan ID dari data formulir. |
+| `localStorage` | Membaca dan menyimpan data tugas dalam bentuk JSON. |
+| ES module | Mengimpor class dan fungsi dari file lain. |
 
 Pilihan mata kuliah diambil dari `js/modules/mata-kuliah.json`. Pengguna juga bisa mengetik mata kuliah lain. Jika file JSON gagal dibaca, aplikasi memakai mata kuliah dari tugas yang sudah tersimpan.
 
