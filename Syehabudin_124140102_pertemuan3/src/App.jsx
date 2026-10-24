@@ -1,6 +1,7 @@
+﻿import './App.css';
 import { NavLink, Route, Routes } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import StatsPage from './pages/StatsPage';
+import HomePage from './pages/Home/Home';
+import StatsPage from './pages/Stats/Stats';
 
 function App() {
   return (

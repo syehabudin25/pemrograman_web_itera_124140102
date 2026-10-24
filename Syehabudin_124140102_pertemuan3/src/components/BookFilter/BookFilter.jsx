@@ -1,3 +1,4 @@
+﻿import './BookFilter.css';
 import PropTypes from 'prop-types';
 
 function BookFilter({ value, onChange }) {

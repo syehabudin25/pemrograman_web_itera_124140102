@@ -1,10 +1,11 @@
-import { useBooks } from '../context/BookContext';
+﻿import './Stats.css';
+import { useBooks } from '../../context/BookContext';
 
 function StatsPage() {
   const { stats } = useBooks();
 
   return (
-    <section>
+    <section className="stats-page">
       <h2>Statistik Buku</h2>
       <ul>
         <li>Total buku: {stats.total}</li>

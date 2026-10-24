@@ -1,16 +1,4 @@
-body { font-family: Arial, sans-serif; background: #f4f6f8; color: #1f2937; margin: 0; display: block; }
+﻿body { font-family: Arial, sans-serif; background: #f4f6f8; color: #1f2937; margin: 0; display: block; }
 #root { width: auto; max-width: none; margin: 0; border: none; text-align: left; }
-.app { max-width: 720px; margin: 0 auto; padding: 24px; text-align: left; }
-nav { display: flex; gap: 16px; margin-bottom: 16px; }
-nav a { text-decoration: none; color: #333; padding: 6px 12px; border-radius: 6px; }
-nav a.active { background: #2563eb; color: #fff; }
-.book-form div { margin-bottom: 8px; }
-.book-form label { display: block; font-weight: bold; }
-.book-form input, .book-form select { width: 100%; padding: 6px; box-sizing: border-box; }
-.form-error { color: #dc2626; font-weight: bold; }
-.book-list { list-style: none; padding: 0; }
-.book-item { display: flex; justify-content: space-between; background: #fff; padding: 12px; border-radius: 8px; margin-bottom: 8px; }
-.badge { padding: 2px 8px; border-radius: 12px; background: #e5e7eb; font-size: 12px; }
-button { margin-right: 6px; cursor: pointer; }
-#search, #filter { margin-left: 8px; margin-bottom: 6px; }
-#search, #filter { margin-left: 8px; margin-bottom: 6px; }
+button { margin-right: 6px; padding: 6px 12px; border: none; border-radius: 6px; background: #2563eb; color: #fff; cursor: pointer; }
+button:hover { background: #1d4ed8; }

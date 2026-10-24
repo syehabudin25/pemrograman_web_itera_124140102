@@ -1,9 +1,10 @@
+﻿import './Home.css';
 import { useState } from 'react';
-import { useBooks } from '../context/BookContext';
-import BookForm from '../components/BookForm/BookForm';
-import BookList from '../components/BookList/BookList';
-import BookFilter from '../components/BookFilter/BookFilter';
-import SearchBar from '../components/SearchBar/SearchBar';
+import { useBooks } from '../../context/BookContext';
+import BookForm from '../../components/BookForm/BookForm';
+import BookList from '../../components/BookList/BookList';
+import BookFilter from '../../components/BookFilter/BookFilter';
+import SearchBar from '../../components/SearchBar/SearchBar';
 
 function HomePage() {
   const { books, addBook, updateBook, deleteBook } = useBooks();
@@ -22,7 +23,7 @@ function HomePage() {
   });
 
   return (
-    <section>
+    <section className="home-page">
       <h2>Daftar Buku</h2>
       <BookForm onSubmit={addBook} />
       <hr />

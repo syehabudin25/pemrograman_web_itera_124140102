@@ -1,0 +1,6 @@
+﻿.book-list { list-style: none; padding: 0; }
+.book-item { display: flex; justify-content: space-between; align-items: center; background: #fff; padding: 12px; border-radius: 8px; margin-bottom: 8px; }
+.badge { padding: 2px 8px; border-radius: 12px; background: #e5e7eb; font-size: 12px; }
+.badge-milik { background: #dbeafe; }
+.badge-baca { background: #fef3c7; }
+.badge-beli { background: #dcfce7; }

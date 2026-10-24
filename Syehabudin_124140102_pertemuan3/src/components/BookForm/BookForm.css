@@ -1,0 +1,5 @@
+﻿.book-form { background: #fff; padding: 16px; border-radius: 8px; margin-bottom: 16px; }
+.book-form div { margin-bottom: 8px; }
+.book-form label { display: block; font-weight: bold; margin-bottom: 4px; }
+.book-form input, .book-form select { width: 100%; padding: 6px; box-sizing: border-box; }
+.form-error { color: #dc2626; font-weight: bold; }
