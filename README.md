@@ -18,6 +18,7 @@ Repository ini saya gunakan untuk menyimpan tugas dan latihan praktikum Pemrogra
 | 2 | JavaScript ES6+ | [Daftar Tugas Kuliah](Syehabudin_124140102_pertemuan2/README.md) |
 | 3 | React | [Manajemen Buku Pribadi](Syehabudin_124140102_pertemuan3/README.md) |
 | 4 | Python Dasar | [Penghitung BMI, Nilai Mahasiswa, dan Modul Matematika](Syehabudin_124140102_pertemuan4/README.md) |
+| 5 | Python OOP | [Sistem Manajemen Perpustakaan Sederhana](Syehabudin_124140102_pertemuan5/README.md) |
 
 ## Pertemuan 1
 
@@ -77,3 +78,19 @@ Program ketiga adalah modul `math_operations` yang berisi konstanta, rumus luas 
 1. Pastikan Python 3.8 atau lebih baru sudah terpasang.
 2. Buka terminal, lalu masuk ke folder `Syehabudin_124140102_pertemuan4`.
 3. Jalankan `py tugas1_bmi.py`, `py tugas2_nilai_mahasiswa.py`, atau `py main.py`.
+
+## Pertemuan 5
+
+Di pertemuan ini, saya membuat sistem perpustakaan sederhana memakai konsep OOP Python. Semua item di perpustakaan, yaitu buku dan majalah, diturunkan dari abstract class `LibraryItem`. Koleksinya dikelola oleh class `Library`, sedangkan class `Member` dipakai untuk anggota yang ingin meminjam dan mengembalikan item. Lewat program ini, kita bisa menambah item, melihat katalog item yang masih tersedia, mencari item dari judul atau id, dan menghitung denda keterlambatan.
+
+Keempat pilar OOP saya terapkan di program ini. Class dipakai untuk memodelkan tiap entitas. Inheritance terlihat pada `Book` dan `Magazine` yang mewarisi `LibraryItem`. Encapsulation diterapkan lewat atribut protected dan private, serta `@property` untuk membaca datanya. Polymorphism muncul pada `get_detail()` dan `hitung_denda()`, yang diisi dengan cara berbeda oleh masing-masing subclass. Untuk latihan hands-on dan latihan mandiri, semuanya saya simpan di folder `praktikum`.
+
+- [Folder tugas](Syehabudin_124140102_pertemuan5/)
+- [Dokumentasi lengkap dan screenshot program](Syehabudin_124140102_pertemuan5/README.md)
+- [Latihan Python OOP](Syehabudin_124140102_pertemuan5/praktikum/)
+
+## Cara menjalankan pertemuan 5
+
+1. Pastikan Python 3.10 atau lebih baru sudah terpasang.
+2. Buka terminal, lalu masuk ke folder `Syehabudin_124140102_pertemuan5/tugas_perpustakaan`.
+3. Jalankan `py main.py`.
