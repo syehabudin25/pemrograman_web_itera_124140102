@@ -19,6 +19,7 @@ Repository ini saya gunakan untuk menyimpan tugas dan latihan praktikum Pemrogra
 | 3 | React | [Manajemen Buku Pribadi](Syehabudin_124140102_pertemuan3/README.md) |
 | 4 | Python Dasar | [Penghitung BMI, Nilai Mahasiswa, dan Modul Matematika](Syehabudin_124140102_pertemuan4/README.md) |
 | 5 | Python OOP | [Sistem Manajemen Perpustakaan Sederhana](Syehabudin_124140102_pertemuan5/README.md) |
+| 6 | Pyramid Framework | [REST API Manajemen Mahasiswa dan Matakuliah](Syehabudin_124140102_pertemuan6/README.md) |
 
 ## Pertemuan 1
 
@@ -94,3 +95,19 @@ Keempat pilar OOP saya terapkan di program ini. Class dipakai untuk memodelkan t
 1. Pastikan Python 3.10 atau lebih baru sudah terpasang.
 2. Buka terminal, lalu masuk ke folder `Syehabudin_124140102_pertemuan5/tugas_perpustakaan`.
 3. Jalankan `py main.py`.
+
+## Pertemuan 6
+
+Pada pertemuan ini, saya membuat REST API sederhana menggunakan Pyramid Framework dengan database PostgreSQL. API ini mengelola data mahasiswa dan mata kuliah, dengan operasi GET, POST, PUT, dan DELETE untuk masing-masing entitas. Struktur tabel dibuat lewat migrasi Alembic, dan data awal diisi dengan script seeding.
+
+Validasi diterapkan pada setiap endpoint. Field wajib yang kosong menghasilkan status 400, sedangkan data yang tidak ditemukan menghasilkan status 404. Nilai `sks` dan `semester` pada mata kuliah harus lebih dari 0, dan `nim` maupun `kode_mk` harus unik.
+
+- [Folder tugas](Syehabudin_124140102_pertemuan6/)
+- [Dokumentasi lengkap dan screenshot pengujian](Syehabudin_124140102_pertemuan6/README.md)
+
+## Cara menjalankan pertemuan 6
+
+1. Pastikan Python 3.10 atau lebih baru dan PostgreSQL sudah terpasang.
+2. Buat database `pyramid_mahasiswa`, lalu ikuti langkah instalasi dan migrasi di README pertemuan 6.
+3. Buka terminal di folder `Syehabudin_124140102_pertemuan6`, lalu jalankan `pserve development.ini --reload`.
+4. Server berjalan di `http://localhost:6543`.
